@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C28F9F02B2F83E2005D6EDD /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28F9EF2B2F83E2005D6EDD /* ConnectionView.swift */; };
+		1C28F9F22B2F867F005D6EDD /* SensorDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28F9F12B2F867F005D6EDD /* SensorDataView.swift */; };
+		1C28F9F52B2F8E16005D6EDD /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28F9F42B2F8E16005D6EDD /* BackgroundView.swift */; };
+		1C28F9F72B2F9805005D6EDD /* ConnectBluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28F9F62B2F9805005D6EDD /* ConnectBluetoothService.swift */; };
+		1C28F9FE2B2FCFBC005D6EDD /* DeviceDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28F9FD2B2FCFBC005D6EDD /* DeviceDataModel.swift */; };
 		1C2A40862B055A1A0042111D /* IoT_ESP32_BLEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A40852B055A1A0042111D /* IoT_ESP32_BLEApp.swift */; };
 		1C2A40882B055A1A0042111D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A40872B055A1A0042111D /* ContentView.swift */; };
 		1C2A408A2B055A1C0042111D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2A40892B055A1C0042111D /* Assets.xcassets */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C28F9EF2B2F83E2005D6EDD /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		1C28F9F12B2F867F005D6EDD /* SensorDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataView.swift; sourceTree = "<group>"; };
+		1C28F9F42B2F8E16005D6EDD /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		1C28F9F62B2F9805005D6EDD /* ConnectBluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectBluetoothService.swift; sourceTree = "<group>"; };
+		1C28F9FD2B2FCFBC005D6EDD /* DeviceDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataModel.swift; sourceTree = "<group>"; };
 		1C2A40822B055A1A0042111D /* IoT_ESP32_BLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IoT_ESP32_BLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2A40852B055A1A0042111D /* IoT_ESP32_BLEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoT_ESP32_BLEApp.swift; sourceTree = "<group>"; };
 		1C2A40872B055A1A0042111D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +56,7 @@
 		1C2A40A02B055A1D0042111D /* IoT_ESP32_BLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoT_ESP32_BLEUITests.swift; sourceTree = "<group>"; };
 		1C2A40A22B055A1D0042111D /* IoT_ESP32_BLEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoT_ESP32_BLEUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1C2A40AF2B063C900042111D /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
+		1C9B00B12B2F45A700EC0E19 /* IoT-ESP32-BLE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "IoT-ESP32-BLE-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +84,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C28F9F82B2F9811005D6EDD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1C2A40AF2B063C900042111D /* BluetoothService.swift */,
+				1C28F9F62B2F9805005D6EDD /* ConnectBluetoothService.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1C28F9F92B2F9845005D6EDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C2A40872B055A1A0042111D /* ContentView.swift */,
+				1C28F9F42B2F8E16005D6EDD /* BackgroundView.swift */,
+				1C28F9EF2B2F83E2005D6EDD /* ConnectionView.swift */,
+				1C28F9F12B2F867F005D6EDD /* SensorDataView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C28F9FA2B2F9858005D6EDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C28F9FD2B2FCFBC005D6EDD /* DeviceDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1C2A40792B055A1A0042111D = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +135,11 @@
 		1C2A40842B055A1A0042111D /* IoT_ESP32_BLE */ = {
 			isa = PBXGroup;
 			children = (
+				1C28F9FA2B2F9858005D6EDD /* Models */,
+				1C28F9F92B2F9845005D6EDD /* Views */,
+				1C28F9F82B2F9811005D6EDD /* ViewModels */,
+				1C9B00B12B2F45A700EC0E19 /* IoT-ESP32-BLE-Info.plist */,
 				1C2A40852B055A1A0042111D /* IoT_ESP32_BLEApp.swift */,
-				1C2A40AF2B063C900042111D /* BluetoothService.swift */,
-				1C2A40872B055A1A0042111D /* ContentView.swift */,
 				1C2A40892B055A1C0042111D /* Assets.xcassets */,
 				1C2A408B2B055A1C0042111D /* Preview Content */,
 			);
@@ -260,8 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C28F9F52B2F8E16005D6EDD /* BackgroundView.swift in Sources */,
+				1C28F9F22B2F867F005D6EDD /* SensorDataView.swift in Sources */,
 				1C2A40882B055A1A0042111D /* ContentView.swift in Sources */,
+				1C28F9FE2B2FCFBC005D6EDD /* DeviceDataModel.swift in Sources */,
 				1C2A40B02B063C900042111D /* BluetoothService.swift in Sources */,
+				1C28F9F72B2F9805005D6EDD /* ConnectBluetoothService.swift in Sources */,
+				1C28F9F02B2F83E2005D6EDD /* ConnectionView.swift in Sources */,
 				1C2A40862B055A1A0042111D /* IoT_ESP32_BLEApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +475,7 @@
 				DEVELOPMENT_TEAM = 83VB49G5S2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IoT-ESP32-BLE-Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Hello;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -459,6 +506,7 @@
 				DEVELOPMENT_TEAM = 83VB49G5S2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IoT-ESP32-BLE-Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Hello;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct IoT_ESP32_BLEApp: App {
+//    let deviceData = DeviceDataModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ConnectionView()
+//            ConnectionView().environment(deviceData)
+//            BluetoothService().environment(deviceData)
         }
     }
 }

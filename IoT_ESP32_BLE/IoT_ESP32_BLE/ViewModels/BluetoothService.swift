@@ -4,11 +4,11 @@
 //
 //  Created by Кирилл Миронов on 16.11.2023.
 //
-
+import SwiftUI
 import Foundation
 import CoreBluetooth
 
-let DeviceName: String = String("BMP180_BLE_Sensor")
+//let DeviceName: String = String("BMP180_BLE_Sensor")
 
 let SERVICE_UUID: CBUUID = CBUUID(string: "bff0a4e6-6aa8-47b0-b6d8-9c2145b6fd93")
 
@@ -28,6 +28,11 @@ enum ConnectionStatus: String {
 
 class BluetoothService: NSObject, ObservableObject {
     
+//    var deviceData = DeviceDataModel()
+//    @EnvironmentObject var deviceData: DeviceDataModel
+//    @Binding var DeviceName: String
+//    let DeviceName: String = deviceData.DeviceName
+    private var DeviceName: String
     private var centralManager: CBCentralManager!
     
     var SensorPeripheral: CBPeripheral?
@@ -36,9 +41,22 @@ class BluetoothService: NSObject, ObservableObject {
     @Published var TemperatureValue: Double = 0
     @Published var PressureValue:Double = 0
     
+//    init(DeviceName: String) {
+//        self.DeviceName = "BMP180_BLE_Sensor"
+////        self.DeviceName = DeviceName
+//        super.init()
+//        
+//        centralManager = CBCentralManager(delegate: self, queue: nil)
+//    }
+//    
+//    
     override init() {
+        self.DeviceName = "" /*BMP180_BLE_Sensor*/
         super.init()
         centralManager = CBCentralManager(delegate: self, queue: nil)
+    }
+    func fetch(name: String) {
+        self.DeviceName = name
     }
     
     func scanForPeripherals() {
@@ -52,13 +70,14 @@ extension BluetoothService: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
             print("CoreBluetooth Powered On")
+            print("Device name: \(DeviceName)")
             scanForPeripherals()
         }
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
-        if peripheral.name == "BMP180_BLE_Sensor" {
+        if peripheral.name == DeviceName {
             print("Discovered \(peripheral.name ?? "no name")")
             SensorPeripheral = peripheral
             centralManager.connect(SensorPeripheral!)
